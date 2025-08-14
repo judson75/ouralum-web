@@ -1,3 +1,5 @@
+.htaccess
 **/cache
 **/error_log
-/wp/error_log
+/wp-admin/error_log
+/wp-config.php

@@ -2247,6 +2247,8 @@ class upload {
      *
      * @access private
      */
+	
+
     function init() {
 
         // overiddable variables
@@ -2546,6 +2548,7 @@ class upload {
 
     }
 
+	
     /**
      * Constructor. Checks if the file has been uploaded
      *
@@ -2570,6 +2573,7 @@ class upload {
      *    or   string $file Local filename
      * @param  string $lang Optional language code
      */
+	
     function upload($file, $lang = 'en_GB') {
 
         $this->version            = '0.32';
@@ -3085,6 +3089,7 @@ class upload {
 
     }
 
+
     /**
      * Returns the version of GD
      *
@@ -3092,6 +3097,7 @@ class upload {
      * @param  boolean  $full Optional flag to get precise version
      * @return float GD version
      */
+	
     function gdversion($full = false) {
         static $gd_version = null;
         static $gd_full_version = null;
@@ -3130,10 +3136,12 @@ class upload {
      * @param  integer $mode Optional permissions
      * @return boolean Success
      */
+	
     function rmkdir($path, $mode = 0777) {
         return is_dir($path) || ( $this->rmkdir(dirname($path), $mode) && $this->_mkdir($path, $mode) );
     }
 
+	
     /**
      * Creates directory
      *
@@ -3142,6 +3150,7 @@ class upload {
      * @param  integer $mode Optional permissions
      * @return boolean Success
      */
+	
     function _mkdir($path, $mode = 0777) {
         $old = umask(0);
         $res = @mkdir($path, $mode);
@@ -3149,6 +3158,7 @@ class upload {
         return $res;
     }
 
+	
     /**
      * Translate error messages
      *
@@ -3157,18 +3167,21 @@ class upload {
      * @param  array   $tokens Optional token values
      * @return string Translated string
      */
+	
     function translate($str, $tokens = array()) {
         if (array_key_exists($str, $this->translation)) $str = $this->translation[$str];
         if (is_array($tokens) && sizeof($tokens) > 0)   $str = vsprintf($str, $tokens);
         return $str;
     }
 
+	
     /**
      * Returns the temp directory
      *
      * @access private
      * @return string Temp directory string
      */
+	
     function temp_dir() {
         $dir = '';
         if (function_exists('sys_get_temp_dir')) $dir = sys_get_temp_dir();
@@ -3195,9 +3208,10 @@ class upload {
      * @param  string  $color  Color string
      * @return array RGB colors
      */
+	
     function getcolors($color) {
-        $color = str_replace('#', '', $color);
-        if (strlen($color) == 3) $color = str_repeat(substr($color, 0, 1), 2) . str_repeat(substr($color, 1, 1), 2) . str_repeat(substr($color, 2, 1), 2);
+		$color = str_replace('#', '', $color);
+       	if (strlen($color) == 3) $color = str_repeat(substr($color, 0, 1), 2) . str_repeat(substr($color, 1, 1), 2) . str_repeat(substr($color, 2, 1), 2);
         $r = sscanf($color, "%2x%2x%2x");
         $red   = (is_array($r) && array_key_exists(0, $r) && is_numeric($r[0]) ? $r[0] : 0);
         $green = (is_array($r) && array_key_exists(1, $r) && is_numeric($r[1]) ? $r[1] : 0);
@@ -3205,6 +3219,7 @@ class upload {
         return array($red, $green, $blue);
     }
 
+	
     /**
      * Decodes sizes
      *
@@ -3212,19 +3227,20 @@ class upload {
      * @param  string  $size  Size in bytes, or shorthand byte options
      * @return integer Size in bytes
      */
+	
     function getsize($size) {
-        $last = strtolower($size{strlen($size)-1});
-        switch($last) {
-            case 'g':
-                $size *= 1024;
-            case 'm':
-                $size *= 1024;
-            case 'k':
-                $size *= 1024;
-        }
-        return $size;
+		$last = strtolower($size[strlen($size)-1]);
+		switch($last) {
+			case 'g':
+				$size *= 1024;
+			case 'm':
+				$size *= 1024;
+			case 'k':
+				$size *= 1024;
+		}
+		return $size;
     }
-
+	
     /**
      * Decodes offsets
      *
@@ -3236,6 +3252,7 @@ class upload {
      * @param  boolean $negative Allow negative offsets to be returned
      * @return array Array of four offsets (TRBL)
      */
+	
     function getoffsets($offsets, $x, $y, $round = true, $negative = true) {
         if (!is_array($offsets)) $offsets = explode(' ', $offsets);
         if (sizeof($offsets) == 4) {
@@ -3269,6 +3286,7 @@ class upload {
         return array($ct, $cr, $cb, $cl);
     }
 
+	
     /**
      * Creates a container image
      *
@@ -3339,6 +3357,7 @@ class upload {
      * @param  int      $pct     Optional percentage of the overlay, between 0 and 100 (default: 100)
      * @return resource Destination image
      */
+	
     function imagecopymergealpha(&$dst_im, &$src_im, $dst_x, $dst_y, $src_x, $src_y, $src_w, $src_h, $pct = 0) {
         $dst_x = (int) $dst_x;
         $dst_y = (int) $dst_y;
@@ -3390,7 +3409,6 @@ class upload {
     }
 
 
-
     /**
      * Actually uploads the file, and act on it according to the set processing class variables
      *
@@ -3415,6 +3433,7 @@ class upload {
      * @param  string $server_path Optional path location of the uploaded file, with an ending slash
      * @return string Optional content of the image
      */
+	
     function process($server_path = null) {
         $this->error        = '';
         $this->processed    = true;
@@ -5150,7 +5169,7 @@ class upload {
         if ($return_mode) return $return_content;
 
     }
-
+	
     /**
      * Deletes the uploaded file from its temporary location
      *
@@ -5245,6 +5264,7 @@ class upload {
         return $res;
     }
 
+	
     /**
      * Saves a BMP image
      *
@@ -5296,6 +5316,7 @@ class upload {
         }
         return true;
     }
+	
 }
 
 ?>

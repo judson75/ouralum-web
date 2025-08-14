@@ -27,6 +27,8 @@ register_deactivation_hook( __FILE__, 'alum_deactivate' );
 function alum_uninstall( ) {
     
 }
+
+
 /* Classes */
 include_once alum_plugin_path . '/lib/class/alum.class.php';
 $alum = new Alum();
@@ -126,11 +128,11 @@ function alum_admin_page() {
 			include('pages/email.php');
 		break;
 	}
-	
-	
 	echo '</div>';
 }
 
+
+/*
 require_once( alum_plugin_path . 'lib/php/class-wp-list-table.php' );
 class Alum_List_Table extends JC_List_Table {
 	
@@ -239,9 +241,9 @@ class Alum_List_Table extends JC_List_Table {
         
         //Return the title contents
         return sprintf('%1$s  %3$s',
-            /*$1%s*/ $item->$title_column,
-            /*$2%s*/ $item->$id_column,
-            /*$3%s*/ $this->row_actions($actions)
+            /*$1%s*\/ $item->$title_column,
+            /*$2%s*\/ $item->$id_column,
+            /*$3%s*\/ $this->row_actions($actions)
         );
     }
 	
@@ -252,8 +254,8 @@ class Alum_List_Table extends JC_List_Table {
 		$title_column = $this->title_column;
         return sprintf(
             '<input type="checkbox" name="%1$s[]" value="%2$s" />',
-            /*$1%s*/ $this->_args['singular'],  //Let's simply repurpose the table's singular label ("movie")
-            /*$2%s*/ $item->$id_column                //The value of the checkbox should be the record's id
+            /*$1%s*\/ $this->_args['singular'],  //Let's simply repurpose the table's singular label ("movie")
+            /*$2%s*\/ $item->$id_column                //The value of the checkbox should be the record's id
         );
     }
 
@@ -305,7 +307,6 @@ class Alum_List_Table extends JC_List_Table {
 			) );
 		}
     }
-    
 }
-
+*/
 ?>

@@ -20,16 +20,7 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'alumsite');
-
-/** MySQL database username */
-define('DB_USER', 'alumsite');
-
-/** MySQL database password */
-define('DB_PASSWORD', 'SS0p9o8iSS');
-
-/** MySQL hostname */
-define('DB_HOST', 'localhost');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/etc/ouralum-web_env.php');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8mb4');
@@ -77,7 +68,13 @@ $table_prefix  = 'wp_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define('WP_DEBUG', false);
+define( 'WP_DEBUG', true );
+define( 'WP_DEBUG_DISPLAY', true ); // Set to false to prevent errors from displaying on the front-end
+define( 'WP_DEBUG_LOG', true );
+
+$autourl = 'https://localhost/ouralum-web/';
+define( 'WP_HOME',  $autourl);
+define( 'WP_SITEURL', $autourl );
 
 /* That's all, stop editing! Happy blogging. */
 
