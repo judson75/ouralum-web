@@ -1,0 +1,57 @@
+Array
+(
+    [action] => profile
+    [user_id] => 165
+    [birthdate] => 12/17/2008
+    [display_name] => Demo User
+    [spouse_name] => 
+    [email] => demo@thealumn.net
+    [mobile_phone] => 
+    [home_phone] => 
+    [work_phone] => 10101
+    [address] => Street 1
+    [city] => Brandon
+    [state] => AL
+    [zipcode] => 1701
+    [occupation] => Administrative & Clerical
+    [occupation2] => Bill & Account Collector
+    [occupation_description] => Accounting Master
+    [employer_name] => Demo company
+    [employer_address] => GH Group Sanfrancisco
+    [are_you_hiring] => 
+    [hiring_position] => 
+    [seeking_employment] => 
+    [type_employment_seeking] => 
+    [format] => json
+)
+Request is: Array
+(
+    [action] => profile
+    [user_id] => 165
+    [birthdate] => 12/17/2008
+    [display_name] => Demo User
+    [spouse_name] => 
+    [email] => demo@thealumn.net
+    [mobile_phone] => 
+    [home_phone] => 
+    [work_phone] => 10101
+    [address] => Street 1
+    [city] => Brandon
+    [state] => AL
+    [zipcode] => 1701
+    [occupation] => Administrative & Clerical
+    [occupation2] => Bill & Account Collector
+    [occupation_description] => Accounting Master
+    [employer_name] => Demo company
+    [employer_address] => GH Group Sanfrancisco
+    [are_you_hiring] => 
+    [hiring_position] => 
+    [seeking_employment] => 
+    [type_employment_seeking] => 
+    [format] => json
+)
+
+User ID: 165
+Display Name: Demo User
+
+Demo User is updated

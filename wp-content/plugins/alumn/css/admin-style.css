@@ -1,0 +1,90 @@
+﻿@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+.page-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba(0,0,0,.7);
+	display: block;
+	z-index: 9998;
+}
+
+.page-loading {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 50px;
+	width: 50px;
+	color: #fff;
+	display: block;
+	margin-top: -25px;
+	margin-left: -25px;
+	z-index: 9999; 
+} 
+
+.table {
+	background: #fff;
+}
+
+.table tr:nth-child(even) {background: #f1f1f1; }
+.table tr:nth-child(odd) {background: #FFF}
+
+.table td { 
+	padding: 5px;
+}
+
+.al-btn {
+	font-size: 22px;
+	padding: 10px 20px;
+	cursor: pointer
+}
+
+.al-btn-primary {
+	
+}
+
+.alert {
+	font-size: 18px;
+	padding: 12px;
+	margin: 10px 0;
+}
+
+.alert-error { 
+	border: 2px solid red;
+	color: red;
+}
+
+.alert-success { 
+	border: 2px solid green;
+	color: green;
+}
+
+#alum_import_file{
+	display: none;
+}
+
+.alum-frm-grp {
+	margin: 0 0 10px 0;
+}
+
+.alum-frm-grp label {
+	display: inline-block;
+	width: 170px;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+.alum-input {
+	vertical-align: middle;
+}
+
+.pfSelect.hasError {
+	border: 1px solid red;
+}
+
+.hasError input {
+	border: 1px solid red;
+}
+
