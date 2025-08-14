@@ -1,0 +1,23 @@
+Array
+(
+    [action] => profile
+    [id] => 2203
+    [user_id] => 165
+    [display_name] =>  Demo
+    [email] =>  demo@thealumn.net
+    [mobile_phone] => 
+    [home_phone] => 
+    [work_phone] => 
+    [address] => 
+    [city] => 
+    [state] => 
+    [zipcode] => 
+    [occupation] => 
+    [occupation2] => 
+    [occupation_description] => 
+    [employer_name] => 
+    [employer_address] => 
+    [are_you_hiring] => 
+    [seeking_employment] => Yes
+    [format] => json
+)
